@@ -310,6 +310,7 @@
 .gallery__image {
   display: block;
   block-size: 100%;
+  inline-size: 100%;
   object-fit: cover;
 }
 
@@ -351,17 +352,13 @@
   margin: 0;
 }
 
-.gallery__image {
-  inline-size: 100%;
-}
-
 .footer {
   display: grid;
   justify-content: center;
   align-items: center;
   padding: 10px;
   block-size: 668px;
-  position: relative; 
+  position: relative;
 }
 
 @media (width >= 768px) {
