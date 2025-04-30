@@ -2,3 +2,29 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+  --bg-color: #000028;
+  --text-color: #000028;
+  --menu-color: #FF0070;
+  --accent-color: #FF0070;
+  --title-color: #DB00FF;
+  --title-lead-color: #FF0070;
+  --main-color: #F1B2CE;
+  --rec-color: #FF0070;
+  --hover-color: rgba(255, 0, 112, 0.5);
+  --bg-image: url('/images/cover-image-dark.png');
+  --bg-corner-top-right: url('/images/Rectangle\ 77.png');
+  --bg-corner-left-bottom: url('/images/Rectangle\ 79.png');
+  --bg-rec-light: url('/images/Ellipse\ 4.png');
+}
+
+.page {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: grid;
+  gap: 40px;
+  font-size: 18px;
+  line-height: 23.4px;
+}

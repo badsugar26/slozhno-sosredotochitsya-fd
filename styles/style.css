@@ -1,5 +1,391 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  font-family: 'IBM Plex mono', sans-serif;
+  background-image: var(--bg-image);
+}
+
+@media (width >= 768px) {
+  .page {
+    gap: 60px;
+  }
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+  padding: 10px;
+  block-size: 668px;
+  position: relative;
+}
+
+@media (width >= 768px) {
+  .header {
+    block-size: 1024px;
+    padding: 20px;
+  }
+}
+
+@media (width >= 1024px) {
+  .header {
+    block-size: 768px;
+    padding: 20px;
+  }
+}
+
+.decorated-zone::before {
+  content: '';
+  background-image: var(--bg-corner-top-right);
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+@media (width >= 768px) {
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.decorated-zone::after {
+  content: '';
+  background-image: var(--bg-corner-left-bottom);
+  width: 25px;
+  height: 25px;
+  bottom: 10px;
+  left: 10px;
+  position: absolute;
+}
+
+@media (width >= 768px) {
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+}
+
+.header__theme-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--menu-color);
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+  padding: 1.5px 13px;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--hover-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--menu-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--menu-color);
+  pointer-events: none;
+}
+
+.header-rec {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  color: var(--rec-color);
+  top: 10px;
+  right: 10px;
+}
+
+@media (width >= 768px) {
+  .header-rec {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.header-rec::after {
+  content: '';
+  background-image: var(--bg-rec-light);
+  background-size: cover;
+  width: 26px;
+  height: 26px;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 83%;
+}
+
+@media (width >= 768px) {
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+.title-decor {
+  color: var(--text-color);
+  background-color: var(--accent-color);
+  font-size: 18px;
+  line-height: 23.4px;
+  font-weight: 700;
+  justify-self: end;
+}
+
+.header-text {
+  inline-size: 355px;
+}
+
+@media (width >= 768px) {
+  .header-text {
+    inline-size: 50%;
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  padding: 0 10px;
+}
+
+@media (width >= 768px) {
+  .main {
+    padding: 0 20px;
+    gap: 80px;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.content-column {
+  grid-template-columns: 1fr;
+}
+
+.content-column-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (width >= 768px) {
+  .content-column {
+    grid-template-columns: min-content 2fr;
+  }
+
+  .content-column-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.content-row-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (width >= 1024px) {
+  .content-row-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+.content__title-lead {
+  font-size: 18px;
+  inline-size: 100%;
+  text-align: left;
+  color: var(--title-lead-color);
+}
+
+@media (width >= 768px) {
+  .content__title-lead {
+    inline-size: 236px;
+  }
+}
+
+@media (width >= 1024px) {
+  .content__title-lead {
+    inline-size: 315px;
+  }
+}
+
+.content__title {
+  font-size: 18px;
+}
+
+.content-text {
+  color: var(--main-color);
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content-link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+.content-link:hover {
+  border-bottom: 1px solid var(--main-color);
+}
+
+.content-link:focus {
+  outline: none;
+}
+
+.content-link:focus-visible {
+  border: 1px solid var(--main-color);
+}
+
+.title-regular {
+  font-weight: 400;
+}
+
+.gallery {
+  display: grid;
+  gap: 10px;
+}
+
+@media (width >= 768px) {
+  .gallery {
+    gap: 20px;
+  }
+}
+
+.gallery-text {
+  justify-self: inherit;
+}
+
+.gallery-container {
+  display: grid;
+  gap: 10px;
+}
+
+.gallery__image {
+  display: block;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+@media (width >= 768px) {
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: dense;
+    gap: 20px;
+    min-height: 780px;
+  }
+  
+  .gallery__item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  
+  .gallery__item:nth-child(2) {
+    grid-column: 3 / 3;
+    grid-row: span 2;
+  }
+
+  .gallery__item:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+  .gallery__item:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: span 1;
+  }
+
+  .gallery__item:nth-child(5) {
+    grid-column: 2 / 4;
+  }
+}
+
+.gallery__item {
+  margin: 0;
+}
+
+.gallery__image {
+  inline-size: 100%;
+}
+
+.footer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  block-size: 668px;
+  position: relative; 
+}
+
+@media (width >= 768px) {
+  .footer {
+    block-size: 1024px;
+    padding: 20px;
+  }
+}
+
+@media (width >= 1024px) {
+  .footer {
+    block-size: 768px;
+  }
+}
+
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  line-height: 83%;
+}
+
+@media (width >= 768px) {
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 }
