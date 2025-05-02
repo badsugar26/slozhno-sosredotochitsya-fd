@@ -12,15 +12,12 @@
   --title-color: #DB00FF;
   --title-lead-color: #FF0070;
   --main-color: #F1B2CE;
-  --rec-color: #FF0070;
   --hover-color: rgba(255, 0, 112, 0.5);
   --bg-image: url('/images/cover-image-dark.png');
   --bg-corner-top-right: url('/images/Rectangle\ 77.png');
   --bg-corner-left-bottom: url('/images/Rectangle\ 79.png');
-  --bg-rec-light: url('/images/Ellipse\ 4.png');
 }
 
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+.theme-dark .header-rec {
+  display: flex;
 }
-
