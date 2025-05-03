@@ -12,10 +12,8 @@
   --title-color: #DB00FF;
   --title-lead-color: #FF0070;
   --main-color: #F1B2CE;
-  --hover-color: rgba(255, 0, 112, 0.5);
-  --bg-image: url('/images/cover-image-dark.png');
-  --bg-corner-top-right: url('/images/Rectangle\ 77.png');
-  --bg-corner-left-bottom: url('/images/Rectangle\ 79.png');
+  --hover-color: rgba(255, 0, 112, 0.4);
+  --bg-image: url('../images/cover-image-dark.png');
 }
 
 .theme-dark .header-rec {

@@ -12,10 +12,8 @@
   --title-color: #FFC2E6;
   --title-lead-color: #000028;
   --main-color: #353430;
-  --hover-color: rgba(53, 52, 48, 0.5);
-  --bg-image: url('/images/cover-image-light.png');
-  --bg-corner-top-right: url('/images/Rectangle-black\ 77.png');
-  --bg-corner-left-bottom: url('/images/Rectangle-black\ 79.png');
+  --hover-color: rgba(53, 52, 48, 0.4);
+  --bg-image: url('../images/cover-image-light.png');
 }
 
 @media (prefers-color-scheme: light) {
@@ -27,10 +25,8 @@
   --title-color: #FFC2E6;
   --title-lead-color: #000028;
   --main-color: #353430;
-  --hover-color: rgba(53, 52, 48, 0.5);
-  --bg-image: url('/images/cover-image-light.png');
-  --bg-corner-top-right: url('/images/Rectangle-black\ 77.png');
-  --bg-corner-left-bottom: url('/images/Rectangle-black\ 79.png');
+  --hover-color: rgba(53, 52, 48, 0.4);
+  --bg-image: url('../images/cover-image-light.png');
   }
 }
 
